@@ -15,8 +15,13 @@ Pablo González - 2º ASIR
     * Crear condiciones
     * Operadores unarios, binarios y lógicos
     * Estructuras de control: for, while, until.
-    * Ex: [print letter in word changing colors](./ejemplos/ex-211213-2.sh)
-    * Ex: [count normal users in passwd](./ejemplos/ex-211214-1.sh)
+    * **Ex**: [print letter in word changing colors](./ejemplos/ex-211213-2.sh)
+    * **Ex**: [count normal users in passwd](./ejemplos/ex-211214-1.sh)
+ * [Apuntes 211214-1](./apuntes/211214-1.md)
+    * Ejemplos YAD.
+    * **Ex**: [Agenda con YAD](./ejemplos/ex-211214-2-agenda-YAD.sh)
+ * [Apuntes 211220-1](./apuntes/211220-1.md)
+    * Trabajar con bases de datos
 
 
 ### Licencia

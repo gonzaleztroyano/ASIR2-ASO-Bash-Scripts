@@ -76,10 +76,16 @@ function modificaciones(){
 
     while read id nom ape tel cor fn
         do
-            if [ "${nom}" =]
-
+            if [ "${nom}" == "${nombre_a_modificar}" ];
+                then
+              
+            fi
+        echo $
     done < /tmp/agenda.txt
 
+## DE LA FORMA BONITA y rápida
+    grep -v "$nombre_a_modificar" /tmp/agenda.txt > /tmp/agenda.txt.new
+    mv /tmp/agenda.txt.new_entry /tmp/agenda.txt
 
 }
 function menu(){
