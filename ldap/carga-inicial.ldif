@@ -1,0 +1,37 @@
+# Creación inicial de OUs, usuarios y grupos
+# Con "sudo slappasswd" podemos generar el hash para las contraseñas
+
+dn: ou=ventas,dc=empresa,dc=local
+objectClass: organizationalUnit
+objectClass: top
+ou: ventas
+
+dn: ou=gestion,dc=empresa,dc=local
+objectClass: organizationalUnit
+objectClass: top
+ou: gestion
+
+dn: ou=ventas,dc=empresa,dc=local
+objectClass: organizationalUnit
+objectClass: top
+ou: ventas
+
+dn: cn=juan,ou=ventas,dc=empresa,dc=local
+objectClass: inetOrgPerson
+objectClass: person
+objectClass: organizationalPerson
+objectClass: posixAccount
+cn: juan 
+sn: Rioz Ramos
+uid: jrura
+gidNumber: 1003
+uidNumber: 1003
+mobile: 6699888777
+userPassword: 
+mail: jruiz.ramos@empresa.com
+
+dn: cn=jefes,ou=ventas,dc=local
+objectClass: posixGroup
+objectClass: top
+cn: jefes
+gidNumber: 1003
