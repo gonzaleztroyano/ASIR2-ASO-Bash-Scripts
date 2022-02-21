@@ -1,0 +1,713 @@
+version: 1
+dn: dc=empresa,dc=local
+objectClass: top
+objectClass: dcObject
+objectClass: organization
+dc: empresa
+o: empresa
+
+dn: ou=id,dc=empresa,dc=local
+objectClass: organizationalUnit
+ou: id
+
+dn: cn=encargados,ou=id,dc=empresa,dc=local
+objectClass: posixGroup
+objectClass: top
+cn: encargados
+gidNumber: 2045
+
+dn: cn=jlgarciajim,ou=id,dc=empresa,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+objectClass: person
+cn: Jose
+cn: jlgarciajim
+gidNumber: 2009
+homeDirectory: /home/jlgarciajim
+loginShell: /bin/bash
+mail: jlgarciajim@empresa.local
+mobile: 623019858
+sn: Garcia Jimenez
+uid: jlgarciajim
+uidNumber: 2009
+userPassword:: e1NTSEF9Y1ZwYkZTVFhQdXJybGt6MzdjTFF2Nk15ZS9vK0thQ2I=
+
+dn: cn=cervantesramos,ou=id,dc=empresa,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+objectClass: person
+cn: Antonio
+cn: cervantesramos
+gidNumber: 2031
+homeDirectory: /home/cervantesramos
+loginShell: /bin/bash
+mail: cervantesramos@empresa.local
+mobile: 654807877
+sn: Cervantes Ramos
+uid: cervantesramos
+uidNumber: 2031
+userPassword:: e1NTSEF9Y1ZwYkZTVFhQdXJybGt6MzdjTFF2Nk15ZS9vK0thQ2I=
+
+dn: cn=lauracasanueva,ou=id,dc=empresa,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+objectClass: person
+cn: Laura
+cn: lauracasanueva
+gidNumber: 2008
+homeDirectory: /home/lauracasanueva
+loginShell: /bin/bash
+mail: lauracasanueva@empresa.local
+mobile: 624414157
+sn: Casanueva Bermejo
+uid: lauracasanueva
+uidNumber: 2008
+userPassword:: e1NTSEF9Y1ZwYkZTVFhQdXJybGt6MzdjTFF2Nk15ZS9vK0thQ2I=
+
+dn: cn=admin,dc=empresa,dc=local
+objectClass: simpleSecurityObject
+objectClass: organizationalRole
+cn: admin
+description: LDAP administrator
+userPassword:: e1NTSEF9ejlITHFVcFRtVk5EQkJ4b0UrZCtBSVpUOHRITmhPY20=
+
+dn: cn=jprod,dc=empresa,dc=local
+objectClass: posixGroup
+cn: jprod
+gidNumber: 2100
+memberUid: adelgado
+
+dn: ou=madrid,dc=empresa,dc=local
+objectClass: organizationalUnit
+ou: madrid
+
+dn: ou=id,ou=madrid,dc=empresa,dc=local
+objectClass: organizationalUnit
+ou: id
+
+dn: ou=ventas,ou=madrid,dc=empresa,dc=local
+objectClass: organizationalUnit
+ou: ventas
+
+dn: ou=gestion,ou=madrid,dc=empresa,dc=local
+objectClass: organizationalUnit
+ou: gestion
+
+dn: ou=personal,ou=madrid,dc=empresa,dc=local
+objectClass: organizationalUnit
+ou: personal
+
+dn: cn=adelgado,ou=personal,ou=madrid,dc=empresa,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+objectClass: person
+cn: Ana
+cn: adelgado
+gidNumber: 2053
+homeDirectory: /home/adelgado
+loginShell: /bin/bash
+mail: adelgado@empresa.local
+mobile: 625889952
+sn: Delgado Casado
+uid: adelgado
+uidNumber: 2053
+userPassword:: e1NTSEF9Y1ZwYkZTVFhQdXJybGt6MzdjTFF2Nk15ZS9vK0thQ2I=
+
+dn: cn=jpizarro,ou=personal,ou=madrid,dc=empresa,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+objectClass: person
+cn: Juan
+cn: jpizarro
+gidNumber: 2050
+homeDirectory: /home/jpizarro
+loginShell: /bin/bash
+mail: jpizarro@empresa.local
+mobile: 625818952
+sn: Pizarro Cortes
+uid: jpizarro
+uidNumber: 2050
+userPassword:: e1NTSEF9Y1ZwYkZTVFhQdXJybGt6MzdjTFF2Nk15ZS9vK0thQ2I=
+
+dn: cn=feralarru,ou=personal,ou=madrid,dc=empresa,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+objectClass: person
+cn: Fernando
+cn: feralarru
+gidNumber: 2007
+homeDirectory: /home/feralarru
+loginShell: /bin/bash
+mail: feralarru@gmail.com
+mobile: 628910121
+sn: Alarcon Ruiz
+uid: feralarru
+uidNumber: 2007
+userPassword:: e1NTSEF9Y1ZwYkZTVFhQdXJybGt6MzdjTFF2Nk15ZS9vK0thQ2I=
+
+dn: ou=marketing,ou=madrid,dc=empresa,dc=local
+objectClass: organizationalUnit
+ou: marketing
+
+dn: ou=ventas,dc=empresa,dc=local
+objectClass: organizationalUnit
+objectClass: top
+ou: ventas
+
+dn: cn=jruiz,ou=ventas,dc=empresa,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+objectClass: person
+cn: Juan
+cn: jruiz
+gidNumber: 2001
+homeDirectory: /home/jruiz
+loginShell: /bin/bash
+mail: jruiz.ramos@empresa.local
+mobile: 6699888777
+sn: Ruiz Ramos
+uid: jruiz
+uidNumber: 2001
+userPassword:: e1NIQX12b1oxSXVmU2hiakVJYitISFhwSWFwTmNQR1k9
+
+dn: cn=eperez,ou=ventas,dc=empresa,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+cn: Eva
+cn: eperez
+gidNumber: 2002
+homeDirectory: /home/eperez
+loginShell: /bin/bash
+sn: Perez
+uid: eperez
+uidNumber: 2002
+userPassword:: e1NIQX12b1oxSXVmU2hiakVJYitISFhwSWFwTmNQR1k9
+
+dn: cn=jmonge,ou=ventas,dc=empresa,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+objectClass: person
+cn:: Sm9hcXXDrW4=
+cn: jmonge
+gidNumber: 2016
+homeDirectory: /home/jmonge
+loginShell: /bin/bash
+mail: jmonge@empresa.local
+mobile: 629563444
+sn: Monge Gonzalez
+uid: jmonge
+uidNumber: 2016
+userPassword:: e1NTSEF9Y1ZwYkZTVFhQdXJybGt6MzdjTFF2Nk15ZS9vK0thQ2I=
+
+dn: cn=virginiaortega,ou=ventas,dc=empresa,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+objectClass: person
+cn: Virginia
+cn: virginiaortega
+gidNumber: 2015
+homeDirectory: /home/virginiaortega
+loginShell: /bin/bash
+mail: virginiaortega@gmail.com
+mobile: 625041332
+sn: Ortega Romero
+uid: virginiaortega
+uidNumber: 2015
+userPassword:: e1NTSEF9Y1ZwYkZTVFhQdXJybGt6MzdjTFF2Nk15ZS9vK0thQ2I=
+
+dn: cn=rosariomonteropinzon,ou=ventas,dc=empresa,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+objectClass: person
+cn: Rosario
+cn: rosariomonteropinzon
+gidNumber: 2014
+homeDirectory: /home/rosariomonteropinzon
+loginShell: /bin/bash
+mail: rosariomonteropinzon@gmail.com
+mobile: 624633688
+sn: Montero Pinzon
+uid: rosariomonteropinzon
+uidNumber: 2014
+userPassword:: e1NTSEF9Y1ZwYkZTVFhQdXJybGt6MzdjTFF2Nk15ZS9vK0thQ2I=
+
+dn: ou=gestion,dc=empresa,dc=local
+objectClass: organizationalUnit
+ou: gestion
+
+dn: cn=jefes,ou=gestion,dc=empresa,dc=local
+objectClass: posixGroup
+cn: jefes-gestion
+cn: jefes
+gidNumber: 2000
+memberUid: jruiz
+
+dn: cn=josebermejo,ou=gestion,dc=empresa,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+objectClass: person
+cn:: Sm9zw6k=
+cn: josebermejo
+gidNumber: 2003
+homeDirectory: /home/josebermejo
+loginShell: /bin/bash
+mail: josebermejo@empresa.local
+mobile: 625817414
+sn: Bermejo Castro
+uid: josebermejo
+uidNumber: 2003
+userPassword:: e1NTSEF9Y1ZwYkZTVFhQdXJybGt6MzdjTFF2Nk15ZS9vK0thQ2I=
+
+dn: ou=londres,dc=empresa,dc=local
+objectClass: organizationalUnit
+ou: londres
+
+dn: ou=marketing,ou=londres,dc=empresa,dc=local
+objectClass: organizationalUnit
+ou: marketing
+
+dn: cn=felixgc,ou=marketing,ou=londres,dc=empresa,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+objectClass: person
+cn: Felix
+cn: felixgc
+gidNumber: 2011
+homeDirectory: /home/felixgc
+loginShell: /bin/bash
+mail: felixgc@empresa.local
+mobile: 628956444
+sn: Guzman Cansado
+uid: felixgc
+uidNumber: 2011
+userPassword:: e1NTSEF9Y1ZwYkZTVFhQdXJybGt6MzdjTFF2Nk15ZS9vK0thQ2I=
+
+dn: cn=pmarmol,ou=marketing,ou=londres,dc=empresa,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+objectClass: person
+cn: Pablo
+cn: pmarmol
+gidNumber: 2052
+homeDirectory: /home/pmarmol
+loginShell: /bin/bash
+mail: pmarmol@empresa.local
+mobile: 625818365
+sn: Marmol Raya
+uid: pmarmol
+uidNumber: 2052
+userPassword:: e1NTSEF9Y1ZwYkZTVFhQdXJybGt6MzdjTFF2Nk15ZS9vK0thQ2I=
+
+dn: cn=pcjhonshon,ou=marketing,ou=londres,dc=empresa,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+objectClass: person
+cn: Paul
+cn: pcjhonshon
+gidNumber: 2054
+homeDirectory: /home/pcjhonshon
+loginShell: /bin/bash
+mail: pcjhonshon@empresa.local
+mobile: 699887744
+sn: Carter Jhonson
+street: Calle X
+uid: pcjhonshon
+uidNumber: 2054
+userPassword:: e1NTSEF9Y1ZwYkZTVFhQdXJybGt6MzdjTFF2Nk15ZS9vK0thQ2I=
+
+dn: cn=isagutihermoso,ou=marketing,ou=londres,dc=empresa,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+objectClass: person
+cn: Isabel
+cn: isagutihermoso
+gidNumber: 2010
+homeDirectory: /home/isagutihermoso
+loginShell: /bin/bash
+mail: isagutihermoso@empresa.local
+mobile: 645033215
+sn: Gutierrez Hermoso
+uid: isagutihermoso
+uidNumber: 2010
+userPassword:: e1NTSEF9Y1ZwYkZTVFhQdXJybGt6MzdjTFF2Nk15ZS9vK0thQ2I=
+
+dn: cn=lourdeshinojosa,ou=marketing,ou=londres,dc=empresa,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+objectClass: person
+cn: Lourdes
+cn: lourdeshinojosa
+gidNumber: 2012
+homeDirectory: /home/lourdeshinojosa
+loginShell: /bin/bash
+mail: lourdeshinojosa@gmail.com
+mobile: 625983015
+sn: Hinojosa Ceballos
+uid: lourdeshinojosa
+uidNumber: 2012
+userPassword:: e1NTSEF9Y1ZwYkZTVFhQdXJybGt6MzdjTFF2Nk15ZS9vK0thQ2I=
+
+dn: ou=toronto,dc=empresa,dc=local
+objectClass: organizationalUnit
+ou: toronto
+
+dn: cn=ecortes,ou=toronto,dc=empresa,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+objectClass: person
+cn: Esther
+cn: ecortes
+gidNumber: 2051
+homeDirectory: /home/ecortes
+loginShell: /bin/bash
+mail: ecortes @empresa.local
+mobile: 625818959
+sn: Cortes Vallejo
+uid: ecortes
+uidNumber: 2051
+userPassword:: e1NTSEF9Y1ZwYkZTVFhQdXJybGt6MzdjTFF2Nk15ZS9vK0thQ2I=
+
+dn: cn=marcossuarezzapata,cn=ecortes,ou=toronto,dc=empresa,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+objectClass: person
+cn: Marcos
+cn: marcossuarezzapata
+gidNumber: 2006
+homeDirectory: /home/marcossuarezzapata
+loginShell: /bin/bash
+mail: marcos.suarez.zapata@empresa.local
+mobile: 645980012
+sn: Suarez Zapata
+uid: marcossuarezzapata
+uidNumber: 2006
+userPassword:: e1NTSEF9Y1ZwYkZTVFhQdXJybGt6MzdjTFF2Nk15ZS9vK0thQ2I=
+
+dn: ou=trabajo,dc=empresa,dc=local
+objectClass: organizationalUnit
+ou: trabajo
+
+dn: cn=rodriortiz,ou=trabajo,dc=empresa,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+objectClass: person
+cn: Rodrigo
+cn: rodriortiz
+gidNumber: 2020
+homeDirectory: /home/rodriortiz
+loginShell: /bin/bash
+mail: rodriortiz@empresa.local
+mobile: 624565617
+sn: Ortiz Herrero
+uid: rodriortiz
+uidNumber: 2020
+userPassword:: e1NTSEF9Y1ZwYkZTVFhQdXJybGt6MzdjTFF2Nk15ZS9vK0thQ2I=
+
+dn: cn=helencasado,ou=trabajo,dc=empresa,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+objectClass: person
+cn: Helena
+cn: helencasado
+gidNumber: 2023
+homeDirectory: /home/helencasado
+loginShell: /bin/bash
+mail: helencasado@empresa.local
+mobile: 624596305
+sn: Casado Soler
+uid: helencasado
+uidNumber: 2023
+userPassword:: e1NTSEF9Y1ZwYkZTVFhQdXJybGt6MzdjTFF2Nk15ZS9vK0thQ2I=
+
+dn: cn=pedrogomezf,ou=trabajo,dc=empresa,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+objectClass: person
+cn: Pedro
+cn: pedrogomezf
+gidNumber: 2018
+homeDirectory: /home/pedrogomezf
+loginShell: /bin/bash
+mail: pedrogomezf@gmail.com
+mobile: 627445610
+sn:: R8OzbWV6IEZ1ZW50ZXM=
+uid: pedrogomezf
+uidNumber: 2018
+userPassword:: e1NTSEF9Y1ZwYkZTVFhQdXJybGt6MzdjTFF2Nk15ZS9vK0thQ2I=
+
+dn: cn=carlosciflop,ou=trabajo,dc=empresa,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+objectClass: person
+cn: Carlos
+cn: carlosciflop
+gidNumber: 2019
+homeDirectory: /home/carlosciflop
+loginShell: /bin/bash
+mail: carlosciflop@empresa.local
+mobile: 628039865
+sn: Cifuentes Lopez
+uid: carlosciflop
+uidNumber: 2019
+userPassword:: e1NTSEF9Y1ZwYkZTVFhQdXJybGt6MzdjTFF2Nk15ZS9vK0thQ2I=
+
+dn: cn=juanbermudez,ou=trabajo,dc=empresa,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+objectClass: person
+cn: Juan
+cn: juanbermudez
+gidNumber: 2025
+homeDirectory: /home/juanbermudez
+loginShell: /bin/bash
+mail: juanbermudez@empresa.local
+mobile: 625449933
+sn: Bermudez Delgado
+uid: juanbermudez
+uidNumber: 2025
+userPassword:: e1NTSEF9Y1ZwYkZTVFhQdXJybGt6MzdjTFF2Nk15ZS9vK0thQ2I=
+
+dn: cn=luisguerrero,ou=trabajo,dc=empresa,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+objectClass: person
+cn: Luis
+cn: luisguerrero
+gidNumber: 2027
+homeDirectory: /home/luisguerrero
+loginShell: /bin/bash
+mail: luisguerrero@empresa.local
+mobile: 624912687
+sn: Gerrero Gil
+uid: luisguerrero
+uidNumber: 2027
+userPassword:: e1NTSEF9Y1ZwYkZTVFhQdXJybGt6MzdjTFF2Nk15ZS9vK0thQ2I=
+
+dn: cn=federicogarcia,ou=trabajo,dc=empresa,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+objectClass: person
+cn: Federico
+cn: federicogarcia
+gidNumber: 2022
+homeDirectory: /home/federicogarcia
+loginShell: /bin/bash
+mail: federicogarcia@empresa.local
+mobile: 623015589
+sn:: R2FyY8OtYSBSdWl6
+uid: federicogarcia
+uidNumber: 2022
+userPassword:: e1NTSEF9Y1ZwYkZTVFhQdXJybGt6MzdjTFF2Nk15ZS9vK0thQ2I=
+
+dn: cn=inesperezramos,ou=trabajo,dc=empresa,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+objectClass: person
+cn: Ines
+cn: inesperezramos
+gidNumber: 2017
+homeDirectory: /home/inesperezramos
+loginShell: /bin/bash
+mail: inesperezramos@empresa.local
+mobile: 623508714
+sn: Perez Ramos
+uid: inesperezramos
+uidNumber: 2017
+userPassword:: e1NTSEF9Y1ZwYkZTVFhQdXJybGt6MzdjTFF2Nk15ZS9vK0thQ2I=
+
+dn: cn=lucasllanospinto,ou=trabajo,dc=empresa,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+objectClass: person
+cn: Lucas
+cn: lucasllanospinto
+gidNumber: 2026
+homeDirectory: /home/lucasllanospinto
+loginShell: /bin/bash
+mail: lucasllanospinto@gmail.com
+mobile: 624309787
+sn: Llanos Pinto
+uid: lucasllanospinto
+uidNumber: 2026
+userPassword:: e1NTSEF9Y1ZwYkZTVFhQdXJybGt6MzdjTFF2Nk15ZS9vK0thQ2I=
+
+dn: cn=evaestebansalgado,ou=trabajo,dc=empresa,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+objectClass: person
+cn:: RXZhIA==
+cn: evaestebansalgado
+gidNumber: 2021
+homeDirectory: /home/evaestebansalgado
+loginShell: /bin/bash
+mail: evaestebansalgado@gmail.com
+mobile: 624369398
+sn: Esteban Salgado
+uid: evaestebansalgado
+uidNumber: 2021
+userPassword:: e1NTSEF9Y1ZwYkZTVFhQdXJybGt6MzdjTFF2Nk15ZS9vK0thQ2I=
+
+dn: cn=mercetorresalonso,ou=trabajo,dc=empresa,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+objectClass: person
+cn: Mercedes
+cn: mercetorresalonso
+gidNumber: 2028
+homeDirectory: /home/mercetorresalonso
+loginShell: /bin/bash
+mail: mercetorresalonso@empresa.local
+mobile: 623934687
+sn: Torres Alonso
+uid: mercetorresalonso
+uidNumber: 2028
+userPassword:: e1NTSEF9Y1ZwYkZTVFhQdXJybGt6MzdjTFF2Nk15ZS9vK0thQ2I=
+
+dn: cn=jorgefontanamartinez,ou=trabajo,dc=empresa,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+objectClass: person
+cn: Jorge
+cn: jorgefontanamartinez
+gidNumber: 2024
+homeDirectory: /home/jorgefontanamartinez
+loginShell: /bin/bash
+mail: jorgefontanamartinez@gmail.com
+mobile: 628963347
+sn: Fontana Soler
+uid: jorgefontanamartinez
+uidNumber: 2024
+userPassword:: e1NTSEF9Y1ZwYkZTVFhQdXJybGt6MzdjTFF2Nk15ZS9vK0thQ2I=
+
+dn: ou=personal,dc=empresa,dc=local
+objectClass: organizationalUnit
+ou: personal
+
+dn: ou=direccion,dc=empresa,dc=local
+objectClass: organizationalUnit
+ou: direccion
+
+dn: cn=cesarmorenocala,ou=direccion,dc=empresa,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+objectClass: person
+cn: Cesar
+cn: cesarmorenocala
+gidNumber: 2029
+homeDirectory: /home/cesarmorenocala
+loginShell: /bin/bash
+mail: cesarmorenocala@empresa.local
+mobile: 624503154
+sn: Moreno Cala
+uid: cesarmorenocala
+uidNumber: 2029
+userPassword:: e1NTSEF9Y1ZwYkZTVFhQdXJybGt6MzdjTFF2Nk15ZS9vK0thQ2I=
+
+dn: cn=cristiniamontecuesta,ou=direccion,dc=empresa,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+objectClass: person
+cn: Cristina
+cn: cristiniamontecuesta
+gidNumber: 2030
+homeDirectory: /home/cristiniamontecuesta
+loginShell: /bin/bash
+mail: cristiniamontecuesta@gmail
+mobile: 628945615
+sn: Monte Cuesta
+uid: cristiniamontecuesta
+uidNumber: 2030
+userPassword:: e1NTSEF9Y1ZwYkZTVFhQdXJybGt6MzdjTFF2Nk15ZS9vK0thQ2I=
+
+dn: ou=formacion,dc=empresa,dc=local
+objectClass: organizationalUnit
+ou: formacion
+
+dn: cn=cdiazmont,ou=formacion,dc=empresa,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+objectClass: person
+cn: Carmen
+cn: cdiazmont
+gidNumber: 2005
+homeDirectory: /home/cdiazmont
+loginShell: /bin/bash
+mail: cdiazmont@empresa.local
+mobile: 623001545
+sn: Diaz Montana
+uid: cdiazmont
+uidNumber: 2005
+userPassword:: e1NTSEF9Y1ZwYkZTVFhQdXJybGt6MzdjTFF2Nk15ZS9vK0thQ2I=
+
+dn: cn=idelgadog,ou=formacion,dc=empresa,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+objectClass: person
+cn: Isabel
+cn: idelgadog
+gidNumber: 2004
+homeDirectory: /home/idelgadog
+loginShell: /bin/bash
+mail: idelgadog@empresa.local
+mobile: 623001547
+sn: Delgado Garrote
+uid: idelgadog
+uidNumber: 2004
+userPassword:: e1NTSEF9Y1ZwYkZTVFhQdXJybGt6MzdjTFF2Nk15ZS9vK0thQ2I=
+
+dn: ou=publicidad,dc=empresa,dc=local
+objectClass: organizationalUnit
+ou: publicidad
+
+dn: cn=pedromedian,ou=publicidad,dc=empresa,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+objectClass: person
+cn: Pedro
+cn: pedromedian
+gidNumber: 2013
+homeDirectory: /home/pedromedian
+loginShell: /bin/bash
+mail: pedromedian@gmail.com
+mobile: 627905115
+sn: Medina Esteban
+uid: pedromedian
+uidNumber: 2013
+userPassword:: e1NTSEF9Y1ZwYkZTVFhQdXJybGt6MzdjTFF2Nk15ZS9vK0thQ2I=
+

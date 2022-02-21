@@ -1,0 +1,17 @@
+dn: cn=pcjhonshon,ou=marketing,ou=londres,dc=empresa,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+objectClass: person
+cn: Paul
+sn: Carter Jhonson
+uid: pcjhonshon
+userPassword: {SSHA}cVpbFSTXPurrlkz37cLQv6Mye/o+KaCb
+loginShell: /bin/bash
+uidNumber: 2054
+gidNumber: 2054
+homeDirectory: /home/pcjhonshon
+mobile: 625889982
+mail: pcjhonshon@empresa.local
+
+# sudo ldapadd -x -D cn=admin,dc=empresa,dc=local -W -f add-pcjhonshon-to-ou-marketing-londres.ldif

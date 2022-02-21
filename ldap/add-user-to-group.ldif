@@ -1,0 +1,4 @@
+dn: cn=jprod,dc=empresa,dc=local
+changetype: modify
+add: memberUid
+memberUid: adelgado

@@ -1,0 +1,7 @@
+dn: ou=gestion,ou=madrid,dc=empresa,dc=local
+changetype: moddn
+newrdn: ou=produccion
+deleteoldrdn=1
+newsuperior: ou=madrid,dc=empresa,dc=local
+
+# sudo ldapmodify -x -D cn=admin,dc=empresa,dc=local -W -f modrdn.ldif

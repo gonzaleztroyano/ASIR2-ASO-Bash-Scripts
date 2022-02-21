@@ -1,0 +1,95 @@
+dn: ou=londres,dc=empresa,dc=local
+objectClass: organizationalUnit
+ou: londres
+
+dn: ou=madrid,dc=empresa,dc=local
+objectClass: organizationalUnit
+ou: madrid
+
+dn: ou=toronto,dc=empresa,dc=local
+objectClass: organizationalUnit
+ou: toronto
+
+dn: ou=personal,ou=madrid,dc=empresa,dc=local
+objectClass: organizationalUnit
+ou: personal
+
+dn: ou=gestion,ou=madrid,dc=empresa,dc=local
+objectClass: organizationalUnit
+ou: gestion
+
+dn: ou=ventas,ou=madrid,dc=empresa,dc=local
+objectClass: organizationalUnit
+ou: ventas
+
+dn: ou=id,ou=madrid,dc=empresa,dc=local
+objectClass: organizationalUnit
+ou: id
+
+
+dn: cn=jpizarro,ou=personal,dc=empresa,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+objectClass: person
+cn: Juan
+sn: Pizarro Cortes
+uid: jpizarro
+userPassword: {SSHA}cVpbFSTXPurrlkz37cLQv6Mye/o+KaCb
+loginShell: /bin/bash
+uidNumber: 2050
+gidNumber: 2050
+homeDirectory: /home/jpizarro
+mobile: 625818952
+mail: jpizarro@empresa.local
+
+dn: cn=ecortes,ou=personal,dc=empresa,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+objectClass: person
+cn: Esther
+sn: Cortes Vallejo
+uid: ecortes
+userPassword: {SSHA}cVpbFSTXPurrlkz37cLQv6Mye/o+KaCb
+loginShell: /bin/bash
+uidNumber: 2051
+gidNumber: 2051
+homeDirectory: /home/ecortes
+mobile: 625818959
+mail: ecortes @empresa.local
+
+
+dn: cn=pmarmol,ou=personal,dc=empresa,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+objectClass: person
+cn: Pablo
+sn: Marmol Raya
+uid: pmarmol
+userPassword: {SSHA}cVpbFSTXPurrlkz37cLQv6Mye/o+KaCb
+loginShell: /bin/bash
+uidNumber: 2052
+gidNumber: 2052
+homeDirectory: /home/pmarmol
+mobile: 625818365
+mail: pmarmol@empresa.local
+
+dn: cn=adelgado,ou=personal,dc=empresa,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+objectClass: person
+cn: Ana
+sn: Delgado Casado
+uid: adelgado
+userPassword: {SSHA}cVpbFSTXPurrlkz37cLQv6Mye/o+KaCb
+loginShell: /bin/bash
+uidNumber: 2053
+gidNumber: 2053
+homeDirectory: /home/adelgado
+mobile: 625889952
+mail: adelgado@empresa.local
+
+

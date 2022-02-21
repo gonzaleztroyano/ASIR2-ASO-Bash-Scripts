@@ -1,0 +1,417 @@
+En el dominio EMPRESA.LOCAL, crear las siguientes entradas utilizando comandos ldap y ficheros ldif
+Al crear los usuarios, además de los datos habituales, incluir: teléfono, correo electrónico y dirección.
+  
+
+
+
+
+
+dn: ou=londres,dc=empresa,dc=local
+objectClass: organizationalUnit
+ou: londres
+
+
+dn: ou=madrid,dc=empresa,dc=local
+objectClass: organizationalUnit
+ou: madrid
+
+
+dn: ou=toronto,dc=empresa,dc=local
+objectClass: organizationalUnit
+ou: toronto
+
+
+dn: ou=personal,ou=madrid,dc=empresa,dc=local
+objectClass: organizationalUnit
+ou: personal
+
+
+dn: ou=gestion,ou=madrid,dc=empresa,dc=local
+objectClass: organizationalUnit
+ou: gestion
+
+
+dn: ou=ventas,ou=madrid,dc=empresa,dc=local
+objectClass: organizationalUnit
+ou: ventas
+
+
+dn: ou=id,ou=madrid,dc=empresa,dc=local
+objectClass: organizationalUnit
+ou: id
+
+
+	dn: cn=jpizarro,ou=personal,ou=madrid,dc=empresa,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+objectClass: person
+cn: Juan
+sn: Pizarro Cortes
+uid: jpizarro
+userPassword: {SSHA}cVpbFSTXPurrlkz37cLQv6Mye/o+KaCb
+loginShell: /bin/bash
+uidNumber: 2050
+gidNumber: 2050
+homeDirectory: /home/jpizarro
+mobile: 625818952
+mail: jpizarro@empresa.local
+
+
+dn: cn=ecortes,ou=personal,ou=madrid,dc=empresa,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+objectClass: person
+cn: Esther
+sn: Cortes Vallejo
+uid: ecortes
+userPassword: {SSHA}cVpbFSTXPurrlkz37cLQv6Mye/o+KaCb
+loginShell: /bin/bash
+uidNumber: 2051
+gidNumber: 2051
+homeDirectory: /home/ecortes
+mobile: 625818959
+mail: ecortes @empresa.local
+
+
+	dn: cn=pmarmol,ou=personal,ou=madrid,dc=empresa,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+objectClass: person
+cn: Pablo
+sn: Marmol Raya
+uid: pmarmol
+userPassword: {SSHA}cVpbFSTXPurrlkz37cLQv6Mye/o+KaCb
+loginShell: /bin/bash
+uidNumber: 2052
+gidNumber: 2052
+homeDirectory: /home/pmarmol
+mobile: 625818365
+mail: pmarmol@empresa.local
+
+
+dn: cn=adelgado,ou=personal,ou=madrid,dc=empresa,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+objectClass: person
+cn: Ana
+sn: Delgado Casado
+uid: adelgado
+userPassword: {SSHA}cVpbFSTXPurrlkz37cLQv6Mye/o+KaCb
+loginShell: /bin/bash
+uidNumber: 2053
+gidNumber: 2053
+homeDirectory: /home/adelgado
+mobile: 625889952
+mail: adelgado@empresa.local
+
+
+	
+
+1. Crear el grupo JProd, fuera de cualquier UO
+dn: cn=jprod,dc=empresa,dc=local
+objectClass: posixGroup
+cn: jprod
+gidNumber: 2100
+	
+
+
+
+2. Mostrar las OU de la organización
+ldapsearch -x -b "dc=empresa,dc=local" -LLL "(objectclass=organizationalUnit)" dn
+	dn: ou=ventas,dc=empresa,dc=local
+dn: ou=gestion,dc=empresa,dc=local
+dn: ou=formacion,dc=empresa,dc=local
+dn: ou=personal,dc=empresa,dc=local
+dn: ou=id,dc=empresa,dc=local
+dn: ou=marketing,dc=empresa,dc=local
+dn: ou=publicidad,dc=empresa,dc=local
+dn: ou=trabajo,dc=empresa,dc=local
+dn: ou=direccion,dc=empresa,dc=local
+dn: ou=londres,dc=empresa,dc=local
+dn: ou=madrid,dc=empresa,dc=local
+dn: ou=toronto,dc=empresa,dc=local
+dn: ou=personal,ou=madrid,dc=empresa,dc=local
+dn: ou=gestion,ou=madrid,dc=empresa,dc=local
+dn: ou=ventas,ou=madrid,dc=empresa,dc=local
+dn: ou=id,ou=madrid,dc=empresa,dc=local
+	
+
+
+
+3. Mostrar los usuarios de la UO Personal
+ldapsearch -x -b "ou=personal,ou=madrid,dc=empresa,dc=local" -LLL "(objectclass=inetOrgPerson)" dn
+	dn: cn=ecortes,ou=personal,ou=madrid,dc=empresa,dc=local
+dn: cn=pmarmol,ou=personal,ou=madrid,dc=empresa,dc=local
+dn: cn=adelgado,ou=personal,ou=madrid,dc=empresa,dc=local
+dn: cn=jpizarro,ou=personal,ou=madrid,dc=empresa,dc=local
+dn: cn=feralarru,ou=personal,ou=madrid,dc=empresa,dc=local
+	
+
+
+
+4. Mostrar el correo electrónico de los usuarios
+
+
+
+
+ldapsearch -x -b "dc=empresa,dc=local" -LLL "(objectclass=inetOrgPerson)" mail
+	ldapsearch -x -b "dc=empresa,dc=local" -LLL "(&(objectclass=inetOrgPerson)(mail=*))" mail
+	dn: cn=jruiz,ou=ventas,dc=empresa,dc=local
+mail: jruiz.ramos@empresa.local
+
+
+dn: cn=eperez,ou=ventas,dc=empresa,dc=local
+
+
+dn: cn=josebermejo,ou=gestion,dc=empresa,dc=local
+mail: josebermejo@empresa.local
+
+
+dn: cn=idelgadog,ou=formacion,dc=empresa,dc=local
+mail: idelgadog@empresa.local
+
+
+dn: cn=cdiazmont,ou=formacion,dc=empresa,dc=local
+mail: cdiazmont@empresa.local
+
+
+dn: cn=feralarru,ou=personal,ou=madrid,dc=empresa,dc=local
+mail: feralarru@gmail.com
+
+
+dn: cn=lauracasanueva,ou=id,dc=empresa,dc=local
+mail: lauracasanueva@empresa.local
+
+
+dn: cn=cervantesramos,ou=id,dc=empresa,dc=local
+mail: cervantesramos@empresa.local
+
+
+dn: cn=jlgarciajim,ou=id,dc=empresa,dc=local
+mail: jlgarciajim@empresa.local
+
+
+dn: cn=isagutihermoso,ou=marketing,dc=empresa,dc=local
+mail: isagutihermoso@empresa.local
+
+
+dn: cn=felixgc,ou=marketing,dc=empresa,dc=local
+mail: felixgc@empresa.local
+
+
+dn: cn=lourdeshinojosa,ou=marketing,dc=empresa,dc=local
+mail: lourdeshinojosa@gmail.com
+	dn: cn=pedromedian,ou=publicidad,dc=empresa,dc=local
+mail: pedromedian@gmail.com
+
+
+dn: cn=rosariomonteropinzon,ou=ventas,dc=empresa,dc=local
+mail: rosariomonteropinzon@gmail.com
+
+
+dn: cn=virginiaortega,ou=ventas,dc=empresa,dc=local
+mail: virginiaortega@gmail.com
+
+
+dn: cn=jmonge,ou=ventas,dc=empresa,dc=local
+mail: jmonge@empresa.local
+
+
+dn: cn=inesperezramos,ou=trabajo,dc=empresa,dc=local
+mail: inesperezramos@empresa.local
+
+
+dn: cn=pedrogomezf,ou=trabajo,dc=empresa,dc=local
+mail: pedrogomezf@gmail.com
+
+
+dn: cn=carlosciflop,ou=trabajo,dc=empresa,dc=local
+mail: carlosciflop@empresa.local
+
+
+dn: cn=rodriortiz,ou=trabajo,dc=empresa,dc=local
+mail: rodriortiz@empresa.local
+dn: cn=evaestebansalgado,ou=trabajo,dc=empresa,dc=local
+mail: evaestebansalgado@gmail.com
+
+
+dn: cn=federicogarcia,ou=trabajo,dc=empresa,dc=local
+mail: federicogarcia@empresa.local
+
+
+dn: cn=helencasado,ou=trabajo,dc=empresa,dc=local
+mail: helencasado@empresa.local
+
+
+dn: cn=jorgefontanamartinez,ou=trabajo,dc=empresa,dc=local
+mail: jorgefontanamartinez@gmail.com
+
+
+dn: cn=juanbermudez,ou=trabajo,dc=empresa,dc=local
+mail: juanbermudez@empresa.local
+	
+
+5. Mostrar todas las OU que contiene Madrid
+ldapsearch -x -b "ou=madrid,dc=empresa,dc=local" -LLL "(objectclass=organizationalUnit)" dn
+	dn: ou=madrid,dc=empresa,dc=local
+dn: ou=id,ou=madrid,dc=empresa,dc=local
+dn: ou=ventas,ou=madrid,dc=empresa,dc=local
+dn: ou=gestion,ou=madrid,dc=empresa,dc=local
+dn: ou=personal,ou=madrid,dc=empresa,dc=local
+	
+
+
+
+6. Renombrar la OU Gestion y llamarla Produccion
+
+
+dn: ou=gestion,cn=madrid,dc=empresa,dc=local
+changetype: moddn
+newrdn: ou=produccion
+deleteoldrdn=1
+newsuperior: ou=madrud,dc=empresa,dc=local
+	
+
+
+
+7. Añadir el usuario Ana Delgado Casdao al grupo JProd
+
+
+dn: cn=jprod,dc=empresa,dc=local
+changetype: modify
+add: memberUid
+memberUid: cn=adelgado,ou=personal,ou=madrid,dc=empresa,dc=local
+	
+
+
+
+8. Mover a Esther Cortes Vallejo a Toronto
+
+
+dn: cn=ecortes,ou=personal,ou=madrid,dc=empresa,dc=local
+changetype: modrdn
+newrdn: cn=ecortes
+deleteoldrdn: 1
+newsuperior: ou=toronto,dc=empresa,dc=local
+	
+
+
+
+9. Crear el grupo Encargados en la UO I+D
+
+
+dn: cn=encargados,ou=id,dc=empresa,dc=local
+objectClass: posixGroup
+objectClass: top
+cn: encargados
+gidNumber: 2045
+	
+
+
+
+10. Mostrar el teléfono y el nombre de todos los usuarios
+
+
+ldapsearch -xLLL -b dc=empresa,dc=local "(objectClass=person)" mobile
+	
+
+
+
+11. Mostrar todos los usuarios cuyo apellido empiece por M
+
+
+ldapsearch -xLLL -b dc=empresa,dc=local "(&(objectClass=person)(sn=m*))" dn 
+	ldapsearch -xLLL -b dc=empresa,dc=local "(&(objectClass=person)(!(sn=m*)))" dn
+	
+
+
+
+12. Eliminar el usuario Juan Pizarro Torres
+
+
+ldapdelete -x -D cn=admin,dc=empresa,dc=local -W cn=jpizarro,ou=personal,ou=madrid,dc=empresa,dc=local 
+	
+
+
+
+13. Crear UO MARKETING, en la sucursal de LONDRES
+
+
+dn: ou=marketing,ou=madrid,dc=empresa,dc=local
+objectClass: organizationalUnit
+ou: marketing
+	sudo ldapadd -x -D cn=admin,dc=empresa,dc=local -W -f add-ou-marketing-to-ou-londres.ldif
+	
+
+14. Alta de empleado PAUL CARTER JHONSON, en la sucursal de LONDRES, en la unidad organizativa creada en el punto anterior
+
+
+
+
+dn: cn=pcjhonshon,ou=marketing,ou=londres,dc=empresa,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+objectClass: person
+cn: Paul
+sn: Carter Jhonson
+uid: pcjhonshon
+userPassword: {SSHA}cVpbFSTXPurrlkz37cLQv6Mye/o+KaCb
+loginShell: /bin/bash
+uidNumber: 2054
+gidNumber: 2054
+homeDirectory: /home/pcjhonshon
+mobile: 625889982
+mail: pcjhonshon@empresa.local
+
+
+	
+
+15. Cambio del empleado PABLO MARMOL RAYA  al departamento MARKETING de la de LONDRES
+
+
+
+
+dn: cn=pmarmol,ou=personal,ou=madrid,dc=empresa,dc=local
+changetype: modrdn
+newrdn: cn=pmarmol
+newsuperior: ou=marketing,ou=londres,dc=empresa,dc=local
+deleteoldrdn: 1
+	sudo ldapmodify -x -D cn=admin,dc=empresa,dc=local -W -f move-pmarmol-to-marketing-londres.ldif
+	
+
+16. Obtener el teléfono de ANA DELGADO
+
+
+
+
+ldapsearch -xLLL -b dc=empresa,dc=local “(&(objectClass=person)(uid=adelgado))”
+	
+
+
+
+17. Modificar la dirección y el teléfono de PAUL CARTER
+
+
+
+
+dn: cn=pcjhonshon,ou=marketing,ou=londres,dc=empresa,dc=local
+changetype: modify
+replace: mobile
+mobile: 699887744
+-
+replace: street
+street: Calle X
+	sudo ldapmodify -x -D cn=admin,dc=empresa,dc=local -W -f mod-address-and-tel-pcjhonson.ldif
+	
+
+
+
+18. Mostrar toda la información de los empleados de nuestro dominio
+
+
+ldapsearch -xLLL -b dc=empresa,dc=local “(objectClass=person)”

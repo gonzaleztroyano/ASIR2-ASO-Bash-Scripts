@@ -1,0 +1,2 @@
+dn: cn=eruizruiz,ou=ventas,dc=empresa,dc=local
+changetype: delete

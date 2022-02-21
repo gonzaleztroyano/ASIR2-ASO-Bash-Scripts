@@ -1,0 +1,28 @@
+dn: cn=jruiz,ou=ventas,dc=empresa,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+objectClass: person
+cn: Juan
+sn: Ruiz Ramos
+uid: jruiz
+userPassword: {SSHA}cVpbFSTXPurrlkz37cLQv6Mye/o+KaCb
+loginShell: /bin/bash
+uidNumber: 2001
+gidNumber: 2001
+homeDirectory: /home/jruiz
+mobile: 6699888777
+mail: jruiz.ramos@empresa.local
+
+dn: cn=eperez,ou=ventas,dc=empresa,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+cn: Eva
+sn: Perez
+uid: eperez
+userPassword: {SSHA}cVpbFSTXPurrlkz37cLQv6Mye/o+KaCb
+loginShell: /bin/bash
+uidNumber: 2002
+gidNumber: 2002
+homeDirectory: /home/eperez

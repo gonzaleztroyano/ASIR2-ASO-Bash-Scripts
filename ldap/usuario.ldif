@@ -1,0 +1,15 @@
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+objectClass: person
+cn: Ernesto
+sn: Ernesto
+uid: eruizruiz
+userPassword: {SSHA}cVpbFSTXPurrlkz37cLQv6Mye/o+KaCb
+loginShell: /bin/bash
+uidNumber: 2014
+gidNumber: 2014
+homeDirectory: /home/eruizruiz
+mobile: 623090878
+mail: eruizruiz@gmail.com
+

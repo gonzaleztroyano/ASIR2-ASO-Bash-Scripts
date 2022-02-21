@@ -1,0 +1,5 @@
+# Modificación de datos del usuario Pepe Perez 
+dn: cn=jruiz,ou=ventas,dc=empresa,dc=local 
+#changetype: modify 
+replace: mail 
+mail: modme@example.com

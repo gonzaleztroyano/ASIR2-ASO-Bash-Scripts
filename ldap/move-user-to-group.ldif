@@ -1,0 +1,6 @@
+dn: cn=ecortes,ou=personal,ou=madrid,dc=empresa,dc=local
+changetype: modrdn
+newrdn: cn=ecortes
+deleteoldrdn: 1
+newsuperior: ou=toronto,dc=empresa,dc=local
+

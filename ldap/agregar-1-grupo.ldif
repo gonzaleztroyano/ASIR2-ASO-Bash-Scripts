@@ -1,0 +1,5 @@
+dn: cn=jprod,dc=empresa,dc=local
+objectClass: posixGroup
+cn: jprod
+gidNumber: 2100
+

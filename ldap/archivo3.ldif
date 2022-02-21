@@ -1,0 +1,5 @@
+dn: cn=jefes,ou=gestion,dc=empresa,dc=local
+objectClass: posixGroup
+cn: jefes-gestion
+gidNumber: 2000
+memberUid: jruiz

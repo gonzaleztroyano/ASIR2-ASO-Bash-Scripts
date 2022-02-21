@@ -1,0 +1,17 @@
+dn: cn=juan,ou=ventas,dc=empresa,dc=local
+objectClass: inetOrgPerson
+objectClass: person
+objectClass: organizationalPerson
+cn: juan 
+sn: Rioz Ramos
+uid: jrura
+gidNumber: 1001
+uidNumber: 1001
+mobile: 6699888777
+mail: jruiz.ramos@empresa.com
+
+dn: cn=jefes,ou=ventas,dc=local
+objectClass: posixGroup
+objectClass: top
+cn: jefes
+gidNumber: 1001

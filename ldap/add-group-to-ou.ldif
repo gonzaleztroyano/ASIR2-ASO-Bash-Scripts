@@ -1,0 +1,7 @@
+dn: cn=encargados,ou=id,dc=empresa,dc=local
+objectClass: posixGroup
+objectClass: top
+cn: encargados
+gidNumber: 2045
+
+#sudo ldapadd -x -D cn=admin,dc=empresa,dc=local -W -f add-group-to-ou.ldif

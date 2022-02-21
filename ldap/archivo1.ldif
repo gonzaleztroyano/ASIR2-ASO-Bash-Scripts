@@ -1,0 +1,4 @@
+
+dn: ou=gestion,dc=empresa,dc=local
+objectClass: organizationalUnit
+ou: gestion

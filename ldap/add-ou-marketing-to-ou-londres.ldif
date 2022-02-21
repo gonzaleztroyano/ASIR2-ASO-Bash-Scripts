@@ -1,0 +1,5 @@
+dn: ou=marketing,ou=londres,dc=empresa,dc=local
+objectClass: organizationalUnit
+ou: marketing
+
+#sudo ldapadd -x -D cn=admin,dc=empresa,dc=local -W -f add-ou-marketing-to-ou-londres.ldif

@@ -1,0 +1,16 @@
+ldapsearch -xLLL -b dc=empresa,dc=local "(&(objectClass=person)(sn=m*))" dn
+
+ldapsearch -xLLL -b dc=empresa,dc=local "(objectClass=person)" mobile
+
+ldapsearch -x -b "ou=madrid,dc=empresa,dc=local" -LLL "(objectclass=organizationalUnit)" dn
+
+
+ldapsearch -x -b "dc=empresa,dc=local" -LLL "(objectclass=inetOrgPerson)" mail
+ldapsearch -x -b "dc=empresa,dc=local" -LLL "(&(objectclass=inetOrgPerson)(mail=*))" mail
+
+
+ldapsearch -xLLL -b dc=empresa,dc=local "(&(objectClass=person)(!(sn=m*)))" dn
+
+ldapsearch -xLLL -b dc=empresa,dc=local "(&(objectClass=person)(uid=adelgado))" mobile
+ldapsearch -xLLL -b dc=empresa,dc=local "(&(objectClass=person)(uid=adelgado))"
+
