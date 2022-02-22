@@ -1,2 +1,4 @@
 dn: cn=eruizruiz,ou=ventas,dc=empresa,dc=local
 changetype: delete
+######################################################
+ldapdelete -v -D "cn=admin,dc=gonzalez,dc=local" -W "uid=user2,ou=people,dc=gonzalez,dc=local"

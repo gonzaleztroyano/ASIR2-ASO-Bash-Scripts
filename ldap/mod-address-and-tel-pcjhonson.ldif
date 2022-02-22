@@ -1,4 +1,6 @@
-sudo ldapmodify -x -D cn=admin,dc=empresa,dc=local -W -f mod-address-and-tel-pcjhonson.ldifdn: cn=pcjhonshon,ou=marketing,ou=londres,dc=empresa,dc=local
+sudo ldapmodify -x -D cn=admin,dc=empresa,dc=local -W -f mod-address-and-tel-pcjhonson.ldif
+
+dn: cn=pcjhonshon,ou=marketing,ou=londres,dc=empresa,dc=local
 changetype: modify
 replace: mobile
 mobile: 699887744

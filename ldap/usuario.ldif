@@ -13,3 +13,4 @@ homeDirectory: /home/eruizruiz
 mobile: 623090878
 mail: eruizruiz@gmail.com
 
+# 	sudo ldapadd -x -D cn=admin,dc=gonzalez,dc=local -W -f $archivo

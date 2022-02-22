@@ -3,3 +3,5 @@ dn: cn=jruiz,ou=ventas,dc=empresa,dc=local
 #changetype: modify 
 replace: mail 
 mail: modme@example.com
+
+# 	sudo ldapmodify -x -D cn=admin,dc=gonzalez,dc=local -W -f $archivo

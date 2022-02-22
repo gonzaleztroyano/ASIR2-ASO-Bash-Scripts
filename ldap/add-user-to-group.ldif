@@ -2,3 +2,5 @@ dn: cn=jprod,dc=empresa,dc=local
 changetype: modify
 add: memberUid
 memberUid: adelgado
+
+# 	sudo ldapmodify -x -D cn=admin,dc=gonzalez,dc=local -W -f $archivo
