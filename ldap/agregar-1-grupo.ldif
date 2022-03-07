@@ -3,3 +3,4 @@ objectClass: posixGroup
 cn: jprod
 gidNumber: 2100
 
+# 	sudo ldapmodify -x -D cn=admin,dc=gonzalez,dc=local -W -f $archivo

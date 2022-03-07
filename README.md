@@ -22,11 +22,15 @@ Pablo González - 2º ASIR
     * **Ex**: [Agenda con YAD](./ejemplos/ex-211214-2-agenda-YAD.sh)
  * [Apuntes 211220-1](./apuntes/211220-1.md)
     * Trabajar con bases de datos
+ * [Ejemplos varios de gestión LDAP y archivos LDIF](./ldap)
+ * Aportaciones de terceros:
+    * [Carpetas_A-Z_con_Shell.sh](./ejemplos/Carpetas_A-Z_con_Shell.sh) de @arrobadiaz
+    * [gestion-ldap-desde-bash.sh](./ejemplos/gestion-ldap-desde-bash.sh)
 
 
 ### Licencia
 Esta obra se publica bajo la licenca Creative Commons BY 4.0 ES.
 
-Autor y año de publicación: Pablo González, 2021.
+Autor y año de publicación: Pablo González (y colaboradores), 2021-2022.
 
 Más información en [el archivo de licencia](./license.md).

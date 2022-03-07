@@ -15,3 +15,5 @@ objectClass: posixGroup
 objectClass: top
 cn: jefes
 gidNumber: 1001
+
+# 	sudo ldapadd -x -D cn=admin,dc=gonzalez,dc=local -W -f $archivo

@@ -4,3 +4,4 @@ newrdn: cn=ecortes
 deleteoldrdn: 1
 newsuperior: ou=toronto,dc=empresa,dc=local
 
+# 	sudo ldapmodify -x -D cn=admin,dc=gonzalez,dc=local -W -f $archivo
